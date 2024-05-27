@@ -19,12 +19,33 @@ class RestaurantCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        configureUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
     }
+    
+    func configureData(data:Restaurant){
+        nameLabel.text = data.name
+        addressLabel.text = data.address
+        categoryLabel.text = data.category
+        phoneLabel.text = data.phoneNumber
+        priceLabel.text = "\(data.price)원"
+        
+        let url = URL(string: data.image)
+        mainImageView.kf.setImage(with: url)
+    }
+    
+    func configureUI(){
+        mainImageView.layer.cornerRadius = 10
+        mainImageView.contentMode = .scaleAspectFill
+        categoryLabel.layer.cornerRadius = 5
+        categoryLabel.clipsToBounds = true
+        
+    }
+    
+    
 
 }

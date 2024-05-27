@@ -9,82 +9,50 @@ import UIKit
 
 class RestaurantTableViewController: UITableViewController {
 
+    @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var categorys: [UIButton]!
     
+    @IBOutlet var selectedAllButton: UIButton!
     
     var selectedCategory:String?
     var selectedCategoryArray:[Restaurant]?
     
-    let dataManger = RestaurantList()
+    let dataManger = RestaurantList().restaurantArray
     override func viewDidLoad() {
         super.viewDidLoad()
-        configure()
+        tableView.rowHeight = 150
+        configureUI()
+        configureSearchBar()
         
     }
-    
-    func configure(){
-        tableView.rowHeight = 150
+    func configureUI(){
         categorys.forEach {
             categoryBG(UIView: $0)
             $0.setTitleColor(.white, for: .normal)
             $0.layer.cornerRadius = 5
             $0.titleLabel?.font = .boldSystemFont(ofSize: 14)
         }
+        
+        selectedAllButton.setTitleColor(.black, for: .normal)
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if selectedCategory != nil{
-            return selectedCategoryArray!.count
-        }else{
-            return dataManger.restaurantArray.count
-        }
+    func configureSearchBar(){
+        searchBar.delegate = self
+        searchBar.barTintColor = UIColor.white
+        searchBar.setBackgroundImage(UIImage.init(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
     }
     
+    @IBAction func selectedAllButtonTapped(_ sender: UIButton) {
+        selectedCategory = nil
+        selectedCategoryArray = nil
+        tableView.reloadData()
+    }
     
     @IBAction func categoryButtonTapped(_ sender: UIButton) {
         guard let title = sender.titleLabel?.text else { return }
         selectedCategory = title
-        selectedCategoryArray = dataManger.restaurantArray.filter { $0.category == selectedCategory }
+        selectedCategoryArray = dataManger.filter { $0.category == selectedCategory }
         tableView.reloadData()
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell", for: indexPath) as! RestaurantCell
-        
-        let data = dataManger.restaurantArray[indexPath.row]
-        
-
-        
-        if selectedCategory == nil{
-            cell.nameLabel.text = data.name
-            cell.addressLabel.text = data.address
-            cell.categoryLabel.text = data.category
-            cell.phoneLabel.text = data.phoneNumber
-            cell.priceLabel.text = "\(data.price)원"
-            
-            let url = URL(string: data.image)
-            cell.mainImageView.kf.setImage(with: url)
-
-        }else{
-            guard let categoryData = selectedCategoryArray?[indexPath.row] else { return UITableViewCell() }
-            cell.nameLabel.text = categoryData.name
-            cell.addressLabel.text = categoryData.address
-            cell.categoryLabel.text = categoryData.category
-            cell.phoneLabel.text = categoryData.phoneNumber
-            cell.priceLabel.text = "\(categoryData.price)원"
-            
-            let url = URL(string: categoryData.image)
-            cell.mainImageView.kf.setImage(with: url)
-            
-        }
-        
-        cell.mainImageView.layer.cornerRadius = 10
-        cell.mainImageView.contentMode = .scaleAspectFill
-        cell.categoryLabel.layer.cornerRadius = 5
-        cell.categoryLabel.clipsToBounds = true
-        categoryBG(UIView:cell.categoryLabel)
-        
-        return cell
     }
     
     func categoryBG(UIView:UIView){
@@ -111,5 +79,47 @@ class RestaurantTableViewController: UITableViewController {
         default:
             UIView.backgroundColor = .systemBlue
         }
+    }
+    
+    // MARK: - tableView function
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if selectedCategoryArray != nil{
+            return selectedCategoryArray!.count
+        }else{
+            return dataManger.count
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell", for: indexPath) as! RestaurantCell
+        
+        if selectedCategoryArray == nil{
+            cell.configureData(data: dataManger[indexPath.row])
+
+        }else{
+            guard let categoryData = selectedCategoryArray?[indexPath.row] else { return UITableViewCell() }
+            cell.configureData(data: categoryData)
+        }
+        categoryBG(UIView:cell.categoryLabel)
+        
+        return cell
+    }
+    
+
+}
+
+// MARK: - UISearchBarDelegate
+extension RestaurantTableViewController:UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        var searchItems:[Restaurant] = []
+
+        dataManger.forEach { item in
+            if item.name.contains(searchBar.text!) || item.category.contains(searchBar.text!){
+                searchItems.append(item)
+            }
+        }
+        print(searchItems)
+        selectedCategoryArray = searchItems
+        tableView.reloadData()
     }
 }

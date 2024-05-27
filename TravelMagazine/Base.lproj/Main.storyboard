@@ -115,25 +115,18 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="77"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z0H-fl-jCD">
-                                    <rect key="frame" x="20" y="5" width="299" height="34"/>
+                                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="b2p-Ou-h2T">
+                                    <rect key="frame" x="14" y="5" width="365" height="44"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="34" id="hS6-y2-Iv9"/>
+                                        <constraint firstAttribute="height" constant="44" id="VHC-bE-Fgx"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
-                                </textField>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01U-qW-CNT">
-                                    <rect key="frame" x="319" y="5" width="54" height="34"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="34" id="Dut-Ox-6X6"/>
-                                        <constraint firstAttribute="width" constant="54" id="dzE-gz-tlO"/>
-                                    </constraints>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="찾기"/>
-                                </button>
+                                    <connections>
+                                        <outlet property="delegate" destination="1LM-EZ-pZL" id="Ahc-h1-Oo2"/>
+                                    </connections>
+                                </searchBar>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2U-Jh-fGE">
-                                    <rect key="frame" x="20" y="43" width="44" height="22"/>
+                                    <rect key="frame" x="20" y="53" width="44" height="22"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="44" id="e9n-SH-hR7"/>
                                         <constraint firstAttribute="height" constant="22" id="ubG-Zz-fvd"/>
@@ -145,7 +138,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlB-Dx-wri">
-                                    <rect key="frame" x="72" y="43" width="44" height="22"/>
+                                    <rect key="frame" x="72" y="53" width="44" height="22"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="22" id="Mg1-Nm-KuY"/>
                                         <constraint firstAttribute="width" constant="44" id="uye-iB-g4E"/>
@@ -157,7 +150,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NtB-xz-sLJ">
-                                    <rect key="frame" x="124" y="43" width="44" height="22"/>
+                                    <rect key="frame" x="124" y="53" width="44" height="22"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="22" id="GcY-Uz-2wZ"/>
                                         <constraint firstAttribute="width" constant="44" id="jRo-iy-ajA"/>
@@ -169,7 +162,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4L5-48-Vav">
-                                    <rect key="frame" x="176" y="43" width="44" height="22"/>
+                                    <rect key="frame" x="176" y="53" width="44" height="22"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="44" id="7uQ-Lj-q1N"/>
                                         <constraint firstAttribute="height" constant="22" id="Y5e-0x-1d7"/>
@@ -181,7 +174,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZ3-Bt-iot">
-                                    <rect key="frame" x="228" y="43" width="44" height="22"/>
+                                    <rect key="frame" x="228" y="53" width="44" height="22"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="22" id="7qq-Y6-dvs"/>
                                         <constraint firstAttribute="width" constant="44" id="wpo-KJ-rRH"/>
@@ -193,7 +186,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpu-Er-55P">
-                                    <rect key="frame" x="280" y="43" width="44" height="22"/>
+                                    <rect key="frame" x="280" y="53" width="44" height="22"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="44" id="LWf-73-hat"/>
                                         <constraint firstAttribute="height" constant="22" id="eXe-Cc-SBh"/>
@@ -204,26 +197,39 @@
                                         <action selector="categoryButtonTapped:" destination="1LM-EZ-pZL" eventType="touchUpInside" id="V5P-kx-VVF"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1o-zs-WvJ">
+                                    <rect key="frame" x="332" y="53" width="44" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="22" id="93x-sW-cd4"/>
+                                        <constraint firstAttribute="width" constant="44" id="hzN-dv-YKe"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="전체"/>
+                                    <connections>
+                                        <action selector="categoryButtonTapped:" destination="1LM-EZ-pZL" eventType="touchUpInside" id="npF-1S-V9N"/>
+                                        <action selector="selectedAllButtonTapped:" destination="1LM-EZ-pZL" eventType="touchUpInside" id="hdM-3G-DDq"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstItem="bpu-Er-55P" firstAttribute="top" secondItem="Z0H-fl-jCD" secondAttribute="bottom" constant="4" id="2q1-HS-Oc1"/>
-                                <constraint firstItem="01U-qW-CNT" firstAttribute="top" secondItem="wIj-3V-TH5" secondAttribute="top" constant="5" id="Cmb-4V-H3n"/>
+                                <constraint firstItem="b2p-Ou-h2T" firstAttribute="leading" secondItem="wIj-3V-TH5" secondAttribute="leading" constant="14" id="9ci-ou-6Pr"/>
                                 <constraint firstItem="NtB-xz-sLJ" firstAttribute="leading" secondItem="FlB-Dx-wri" secondAttribute="trailing" constant="8" id="DLc-0r-Mnf"/>
                                 <constraint firstItem="bpu-Er-55P" firstAttribute="leading" secondItem="hZ3-Bt-iot" secondAttribute="trailing" constant="8" id="Hpk-wy-acD"/>
-                                <constraint firstAttribute="trailing" secondItem="01U-qW-CNT" secondAttribute="trailing" constant="20" id="L0w-EY-Xi6"/>
+                                <constraint firstItem="b2p-Ou-h2T" firstAttribute="top" secondItem="wIj-3V-TH5" secondAttribute="top" constant="5" id="L0p-rl-86W"/>
                                 <constraint firstItem="hZ3-Bt-iot" firstAttribute="leading" secondItem="4L5-48-Vav" secondAttribute="trailing" constant="8" id="MzZ-3Q-gUq"/>
+                                <constraint firstAttribute="trailing" secondItem="b2p-Ou-h2T" secondAttribute="trailing" constant="14" id="On0-dD-KXl"/>
+                                <constraint firstItem="FlB-Dx-wri" firstAttribute="top" secondItem="b2p-Ou-h2T" secondAttribute="bottom" constant="4" id="PqJ-J6-Zl6"/>
                                 <constraint firstItem="4L5-48-Vav" firstAttribute="leading" secondItem="NtB-xz-sLJ" secondAttribute="trailing" constant="8" id="Rdy-eP-RNo"/>
-                                <constraint firstItem="01U-qW-CNT" firstAttribute="leading" secondItem="Z0H-fl-jCD" secondAttribute="trailing" id="TOl-zD-sNO"/>
-                                <constraint firstItem="Z0H-fl-jCD" firstAttribute="top" secondItem="wIj-3V-TH5" secondAttribute="top" constant="5" id="Tgj-mY-hJp"/>
-                                <constraint firstItem="hZ3-Bt-iot" firstAttribute="top" secondItem="Z0H-fl-jCD" secondAttribute="bottom" constant="4" id="ZUp-nS-ugL"/>
-                                <constraint firstItem="4L5-48-Vav" firstAttribute="top" secondItem="Z0H-fl-jCD" secondAttribute="bottom" constant="4" id="ZaG-NB-Jdt"/>
+                                <constraint firstItem="j1o-zs-WvJ" firstAttribute="top" secondItem="b2p-Ou-h2T" secondAttribute="bottom" constant="4" id="aeP-Io-FeK"/>
+                                <constraint firstItem="NtB-xz-sLJ" firstAttribute="top" secondItem="b2p-Ou-h2T" secondAttribute="bottom" constant="4" id="aiv-FA-Fj3"/>
                                 <constraint firstItem="FlB-Dx-wri" firstAttribute="leading" secondItem="l2U-Jh-fGE" secondAttribute="trailing" constant="8" id="dai-pY-fbC"/>
-                                <constraint firstItem="l2U-Jh-fGE" firstAttribute="top" secondItem="Z0H-fl-jCD" secondAttribute="bottom" constant="4" id="fiP-oo-dwx"/>
-                                <constraint firstItem="Z0H-fl-jCD" firstAttribute="leading" secondItem="wIj-3V-TH5" secondAttribute="leading" constant="20" id="sbX-qO-DB3"/>
-                                <constraint firstItem="NtB-xz-sLJ" firstAttribute="top" secondItem="Z0H-fl-jCD" secondAttribute="bottom" constant="4" id="t2N-t5-NAg"/>
+                                <constraint firstItem="4L5-48-Vav" firstAttribute="top" secondItem="b2p-Ou-h2T" secondAttribute="bottom" constant="4" id="jWj-US-MpP"/>
+                                <constraint firstItem="bpu-Er-55P" firstAttribute="top" secondItem="b2p-Ou-h2T" secondAttribute="bottom" constant="4" id="lb6-d8-1Pi"/>
+                                <constraint firstItem="j1o-zs-WvJ" firstAttribute="leading" secondItem="bpu-Er-55P" secondAttribute="trailing" constant="8" id="nQn-ig-Tso"/>
+                                <constraint firstItem="hZ3-Bt-iot" firstAttribute="top" secondItem="b2p-Ou-h2T" secondAttribute="bottom" constant="4" id="nxy-ns-VBA"/>
                                 <constraint firstItem="l2U-Jh-fGE" firstAttribute="leading" secondItem="wIj-3V-TH5" secondAttribute="leading" constant="20" id="trg-5I-Wj0"/>
-                                <constraint firstItem="FlB-Dx-wri" firstAttribute="top" secondItem="Z0H-fl-jCD" secondAttribute="bottom" constant="4" id="w5Q-kv-TYx"/>
+                                <constraint firstItem="l2U-Jh-fGE" firstAttribute="top" secondItem="b2p-Ou-h2T" secondAttribute="bottom" constant="4" id="zKq-J0-1tM"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -323,6 +329,8 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="searchBar" destination="b2p-Ou-h2T" id="ur7-3c-xHx"/>
+                        <outlet property="selectedAllButton" destination="j1o-zs-WvJ" id="lGL-5a-HxU"/>
                         <outletCollection property="categorys" destination="bpu-Er-55P" collectionClass="NSMutableArray" id="bFu-kc-vIw"/>
                         <outletCollection property="categorys" destination="hZ3-Bt-iot" collectionClass="NSMutableArray" id="383-Yl-0SZ"/>
                         <outletCollection property="categorys" destination="4L5-48-Vav" collectionClass="NSMutableArray" id="cm8-aI-5gJ"/>
