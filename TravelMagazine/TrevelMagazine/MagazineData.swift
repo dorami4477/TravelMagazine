@@ -15,16 +15,15 @@ struct Magazine{
     let link:String
 
     var newDate:String{
-     let myFormatter = DateFormatter()
-     myFormatter.dateFormat = "yyMMdd"
-     myFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+        let myFormatter = DateFormatter()
+        myFormatter.dateFormat = "yyMMdd"
+        myFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
      
- if let stirngDate = myFormatter.date(from: date){
-     myFormatter.dateFormat = "yy년 MM월 dd일"
-     let dateString = myFormatter.string(from: stirngDate)
-     return dateString
+        if let stirngDate = myFormatter.date(from: date){
+            myFormatter.dateFormat = "yy년 MM월 dd일"
+            let dateString = myFormatter.string(from: stirngDate)
+            return dateString
         }
-        
         return date
     }
 

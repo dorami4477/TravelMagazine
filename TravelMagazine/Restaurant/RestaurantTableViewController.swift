@@ -95,13 +95,14 @@ class RestaurantTableViewController: UITableViewController {
         
         if selectedCategoryArray == nil{
             cell.configureData(data: dataManger[indexPath.row])
-
+            
         }else{
             guard let categoryData = selectedCategoryArray?[indexPath.row] else { return UITableViewCell() }
             cell.configureData(data: categoryData)
+            
         }
         categoryBG(UIView:cell.categoryLabel)
-        
+        cell.selectionStyle = .none
         return cell
     }
     
