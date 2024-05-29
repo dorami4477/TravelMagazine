@@ -24,6 +24,7 @@ class PopularCityViewController: UIViewController {
         configureTableView()
     }
     
+    
     func configure(){
         title = "인기도시"
         locationSegmentedControl.setTitle("모두", forSegmentAt: 0)
@@ -38,23 +39,25 @@ class PopularCityViewController: UIViewController {
     func configureTableView(){
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "CityCell", bundle: nil), forCellReuseIdentifier: "CityCell")
+        tableView.register(UINib(nibName: CellID.cityIdentifier, bundle: nil), forCellReuseIdentifier: CellID.cityIdentifier)
         tableView.rowHeight = 120
         tableView.separatorStyle = .none
     }
 
+    
     //세그먼트컨트롤러 액션
     @IBAction func locationChanged(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0{
             selectedItems = cityInfo
-            tableView.reloadData()
+
         }else if sender.selectedSegmentIndex == 1{
             selectedItems = cityInfo.filter{ $0.domestic_travel }
-            tableView.reloadData()
+            
         }else if sender.selectedSegmentIndex == 2{
             selectedItems = cityInfo.filter{ $0.domestic_travel == false }
-            tableView.reloadData()
+            
         }
+        tableView.reloadData()
     }
     
 
@@ -91,9 +94,9 @@ extension PopularCityViewController:UISearchBarDelegate{
             view.endEditing(true)
             tableView.reloadData()
             
-            //공백일 경우, 모두 값 리턴
-        }else{
             
+        }else{
+            //공백일 경우, 모든 값 리턴
             let alert = UIAlertController(title: "검색어를 입력해주세요.", message: nil, preferredStyle: .alert)
             let ok = UIAlertAction(title: "확인", style: .default){ _ in
                 searchBar.text = ""
@@ -118,7 +121,7 @@ extension PopularCityViewController:UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell", for: indexPath) as! CityCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellID.cityIdentifier, for: indexPath) as! CityCell
         cell.configureData(selectedItems[indexPath.row])
         cell.selectionStyle = .none
         if let searchStr{
