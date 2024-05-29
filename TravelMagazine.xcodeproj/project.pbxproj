@@ -12,6 +12,10 @@
 		481D70A52C01C01C006A2302 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481D70A42C01C01C006A2302 /* RestaurantTableViewController.swift */; };
 		481D70A72C01C118006A2302 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481D70A62C01C118006A2302 /* RestaurantCell.swift */; };
 		484C5DAD2C06295E003CF827 /* UI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484C5DAC2C06295E003CF827 /* UI+Extension.swift */; };
+		486D13C82C070F830044CE59 /* PopularCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486D13C72C070F830044CE59 /* PopularCityViewController.swift */; };
+		486D13CA2C0710B30044CE59 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486D13C92C0710B30044CE59 /* CityInfo.swift */; };
+		486D13CD2C0711420044CE59 /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486D13CC2C0711420044CE59 /* CityCell.xib */; };
+		486D13CE2C0711420044CE59 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486D13CB2C0711420044CE59 /* CityCell.swift */; };
 		486E90F92C018DAA0040913A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E90F82C018DAA0040913A /* AppDelegate.swift */; };
 		486E90FB2C018DAA0040913A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E90FA2C018DAA0040913A /* SceneDelegate.swift */; };
 		486E90FD2C018DAA0040913A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E90FC2C018DAA0040913A /* ViewController.swift */; };
@@ -27,6 +31,10 @@
 		481D70A42C01C01C006A2302 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		481D70A62C01C118006A2302 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		484C5DAC2C06295E003CF827 /* UI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI+Extension.swift"; sourceTree = "<group>"; };
+		486D13C72C070F830044CE59 /* PopularCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityViewController.swift; sourceTree = "<group>"; };
+		486D13C92C0710B30044CE59 /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
+		486D13CB2C0711420044CE59 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		486D13CC2C0711420044CE59 /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
 		486E90F52C018DAA0040913A /* TravelMagazine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelMagazine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		486E90F82C018DAA0040913A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		486E90FA2C018DAA0040913A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,9 +62,9 @@
 		484C5DAE2C062BB9003CF827 /* TrevelMagazine */ = {
 			isa = PBXGroup;
 			children = (
+				486E91142C01A5F10040913A /* ListCell.swift */,
 				486E910E2C0191C00040913A /* MagazineData.swift */,
 				486E90FC2C018DAA0040913A /* ViewController.swift */,
-				484C5DAC2C06295E003CF827 /* UI+Extension.swift */,
 			);
 			path = TrevelMagazine;
 			sourceTree = "<group>";
@@ -69,6 +77,17 @@
 				481D70A62C01C118006A2302 /* RestaurantCell.swift */,
 			);
 			path = Restaurant;
+			sourceTree = "<group>";
+		};
+		486D13C62C070F690044CE59 /* PopularCity */ = {
+			isa = PBXGroup;
+			children = (
+				486D13C92C0710B30044CE59 /* CityInfo.swift */,
+				486D13C72C070F830044CE59 /* PopularCityViewController.swift */,
+				486D13CB2C0711420044CE59 /* CityCell.swift */,
+				486D13CC2C0711420044CE59 /* CityCell.xib */,
+			);
+			path = PopularCity;
 			sourceTree = "<group>";
 		};
 		486E90EC2C018DAA0040913A = {
@@ -90,11 +109,12 @@
 		486E90F72C018DAA0040913A /* TravelMagazine */ = {
 			isa = PBXGroup;
 			children = (
+				486D13C62C070F690044CE59 /* PopularCity */,
 				484C5DAF2C062BC7003CF827 /* Restaurant */,
 				484C5DAE2C062BB9003CF827 /* TrevelMagazine */,
 				486E90F82C018DAA0040913A /* AppDelegate.swift */,
 				486E90FA2C018DAA0040913A /* SceneDelegate.swift */,
-				486E91142C01A5F10040913A /* ListCell.swift */,
+				484C5DAC2C06295E003CF827 /* UI+Extension.swift */,
 				486E90FE2C018DAA0040913A /* Main.storyboard */,
 				486E91012C018DAB0040913A /* Assets.xcassets */,
 				486E91032C018DAB0040913A /* LaunchScreen.storyboard */,
@@ -169,6 +189,7 @@
 			files = (
 				486E91022C018DAB0040913A /* Assets.xcassets in Resources */,
 				486E91052C018DAB0040913A /* Base in Resources */,
+				486D13CD2C0711420044CE59 /* CityCell.xib in Resources */,
 				486E91002C018DAA0040913A /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,13 +203,16 @@
 			files = (
 				481D70A72C01C118006A2302 /* RestaurantCell.swift in Sources */,
 				484C5DAD2C06295E003CF827 /* UI+Extension.swift in Sources */,
+				486D13CE2C0711420044CE59 /* CityCell.swift in Sources */,
 				486E90FD2C018DAA0040913A /* ViewController.swift in Sources */,
+				486D13CA2C0710B30044CE59 /* CityInfo.swift in Sources */,
 				486E90F92C018DAA0040913A /* AppDelegate.swift in Sources */,
 				481D70A52C01C01C006A2302 /* RestaurantTableViewController.swift in Sources */,
 				481D70A32C01BD58006A2302 /* RestaurantData.swift in Sources */,
 				486E91152C01A5F10040913A /* ListCell.swift in Sources */,
 				486E90FB2C018DAA0040913A /* SceneDelegate.swift in Sources */,
 				486E910F2C0191C00040913A /* MagazineData.swift in Sources */,
+				486D13C82C070F830044CE59 /* PopularCityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
