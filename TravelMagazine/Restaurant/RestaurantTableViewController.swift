@@ -26,6 +26,9 @@ class RestaurantTableViewController: UITableViewController {
         
     }
     func configureUI(){
+        let map = UIBarButtonItem(image: UIImage(systemName: "map.fill"), style: .plain, target: self, action: #selector(mapButtonClicked))
+        navigationItem.rightBarButtonItem = map
+        
         categorys.forEach {
             categoryBG(UIView: $0)
             $0.setTitleColor(.white, for: .normal)
@@ -80,6 +83,13 @@ class RestaurantTableViewController: UITableViewController {
             UIView.backgroundColor = .systemBlue
         }
     }
+    
+    @objc func mapButtonClicked(){
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        vc.restaurantData = dataManger
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
     // MARK: - tableView function
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

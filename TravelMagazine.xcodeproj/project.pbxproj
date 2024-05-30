@@ -24,6 +24,7 @@
 		486E91052C018DAB0040913A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 486E91042C018DAB0040913A /* Base */; };
 		486E910F2C0191C00040913A /* MagazineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E910E2C0191C00040913A /* MagazineData.swift */; };
 		486E91152C01A5F10040913A /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E91142C01A5F10040913A /* ListCell.swift */; };
+		48B9C37C2C086F930019B145 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B9C37B2C086F930019B145 /* MapViewController.swift */; };
 		48CA70ED2C0762BE005CBC6B /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA70EC2C0762BE005CBC6B /* Contants.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		486E91062C018DAB0040913A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		486E910E2C0191C00040913A /* MagazineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineData.swift; sourceTree = "<group>"; };
 		486E91142C01A5F10040913A /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		48B9C37B2C086F930019B145 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		48CA70EC2C0762BE005CBC6B /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				48CA70EB2C0762A7005CBC6B /* Helpers */,
+				48B9C37D2C0870100019B145 /* Map */,
 				486D13C62C070F690044CE59 /* PopularCity */,
 				484C5DAF2C062BC7003CF827 /* Restaurant */,
 				484C5DAE2C062BB9003CF827 /* TrevelMagazine */,
@@ -123,6 +126,14 @@
 				486E91062C018DAB0040913A /* Info.plist */,
 			);
 			path = TravelMagazine;
+			sourceTree = "<group>";
+		};
+		48B9C37D2C0870100019B145 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				48B9C37B2C086F930019B145 /* MapViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		48CA70EB2C0762A7005CBC6B /* Helpers */ = {
@@ -225,6 +236,7 @@
 				486E90FB2C018DAA0040913A /* SceneDelegate.swift in Sources */,
 				486E910F2C0191C00040913A /* MagazineData.swift in Sources */,
 				486D13C82C070F830044CE59 /* PopularCityViewController.swift in Sources */,
+				48B9C37C2C086F930019B145 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
