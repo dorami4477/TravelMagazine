@@ -10,6 +10,7 @@ import Kingfisher
 
 class CityCell: UITableViewCell {
 
+    @IBOutlet var shadowUIView: UIView!
     @IBOutlet var backUIView: UIView!
     @IBOutlet var mainImageView: UIImageView!
     @IBOutlet var cityNameLabel: UILabel!
@@ -23,6 +24,8 @@ class CityCell: UITableViewCell {
 
     override func draw(_ rect: CGRect) {
         backUIView.roundCorners(corners: [.bottomRight, .topLeft], radius: 20)
+        
+
 
     }
     
@@ -30,16 +33,16 @@ class CityCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    //검색한 텍스트스타일 변경 ** 대소문자 구문을 못하는 문제가 있음
+    //검색한 텍스트스타일 변경
     func changeText(text:String){
         let attributedStr = NSMutableAttributedString(string: cityNameLabel.text!)
-        attributedStr.addAttribute(.backgroundColor, value: UIColor.yellow, range: (cityNameLabel.text! as NSString).range(of: text))
-        attributedStr.addAttribute(.foregroundColor, value: UIColor.black, range: (cityNameLabel.text! as NSString).range(of: text))
+        attributedStr.addAttribute(.backgroundColor, value: UIColor.yellow, range: (cityNameLabel.text!.lowercased() as NSString).range(of: text.lowercased()))
+        attributedStr.addAttribute(.foregroundColor, value: UIColor.black, range: (cityNameLabel.text!.lowercased() as NSString).range(of: text.lowercased()))
         cityNameLabel.attributedText = attributedStr
         
         let attributedStr2 = NSMutableAttributedString(string: explainLabel.text!)
-        attributedStr2.addAttribute(.backgroundColor, value: UIColor.yellow, range: (explainLabel.text! as NSString).range(of: text))
-        attributedStr2.addAttribute(.foregroundColor, value: UIColor.black, range: (explainLabel.text! as NSString).range(of: text))
+        attributedStr2.addAttribute(.backgroundColor, value: UIColor.yellow, range: (explainLabel.text!.lowercased() as NSString).range(of: text.lowercased()))
+        attributedStr2.addAttribute(.foregroundColor, value: UIColor.black, range: (explainLabel.text!.lowercased() as NSString).range(of: text.lowercased()))
         explainLabel.attributedText = attributedStr2
     }
     
@@ -50,11 +53,15 @@ class CityCell: UITableViewCell {
         explainLabel.setUILabel(size: 14, weight: .regular, color: .white, numberOfLines: 1)
         explainLabel.backgroundColor = .black.withAlphaComponent(0.6)
         
-        //** 그림자가 들어가지 않음!
-        backUIView.layer.masksToBounds = false
-        backUIView.layer.shadowColor = UIColor.black.cgColor
-        backUIView.layer.shadowOpacity = 0.4
-        backUIView.layer.shadowRadius = 6
+        //** 그림자 키워드
+        // clipsToBounds - cornerRadius
+        // maskToBounds - shadow
+        shadowUIView.layer.masksToBounds = false
+        shadowUIView.layer.shadowColor = UIColor.black.cgColor
+        shadowUIView.layer.shadowOpacity = 1
+        shadowUIView.layer.shadowRadius = 14
+        shadowUIView.layer.shadowOffset = .init(width: 5, height: 5)
+
     }
     
     

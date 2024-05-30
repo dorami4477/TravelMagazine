@@ -18,6 +18,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="411" height="136"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mwr-lg-daO">
+                        <rect key="frame" x="35" y="16" width="341" height="104"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3h-4H-yoc">
                         <rect key="frame" x="24" y="8" width="363" height="120"/>
                         <subviews>
@@ -62,10 +66,14 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Mwr-lg-daO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="Drq-FX-k0A"/>
                     <constraint firstAttribute="trailing" secondItem="G3h-4H-yoc" secondAttribute="trailing" constant="24" id="NIt-3F-oCW"/>
                     <constraint firstItem="G3h-4H-yoc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Ni6-ok-WaS"/>
                     <constraint firstItem="G3h-4H-yoc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="Sfg-sW-r2i"/>
                     <constraint firstAttribute="bottom" secondItem="G3h-4H-yoc" secondAttribute="bottom" constant="8" id="Xub-wC-g5P"/>
+                    <constraint firstItem="Mwr-lg-daO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="bgl-zU-aqH"/>
+                    <constraint firstAttribute="bottom" secondItem="Mwr-lg-daO" secondAttribute="bottom" constant="16" id="cE3-2j-WN7"/>
+                    <constraint firstAttribute="trailing" secondItem="Mwr-lg-daO" secondAttribute="trailing" constant="35" id="rEN-P8-6cu"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -74,6 +82,7 @@
                 <outlet property="cityNameLabel" destination="9WD-8J-a3g" id="SGT-EB-FnV"/>
                 <outlet property="explainLabel" destination="IAZ-q6-36c" id="QHc-tN-YqB"/>
                 <outlet property="mainImageView" destination="eSS-Gh-8Fc" id="8P2-gs-LQt"/>
+                <outlet property="shadowUIView" destination="Mwr-lg-daO" id="gfW-x5-pOJ"/>
             </connections>
             <point key="canvasLocation" x="199.23664122137404" y="21.126760563380284"/>
         </tableViewCell>
