@@ -16,6 +16,15 @@ class MapViewController: UIViewController{
         }
     }
     var selectedData:[Restaurant]?
+    
+    //카테고리 이름 가지고 오기
+    var categoryTitle:Set<String>{
+        var set:Set<String> = []
+        restaurantData?.forEach{
+            set.insert($0.category)
+        }
+        return set
+    }
     var annotations: [MKAnnotation] = []
     
     @IBOutlet var mapView: MKMapView!
@@ -27,40 +36,31 @@ class MapViewController: UIViewController{
         makeAnnotaion()
     }
 
-    
     func configureNav(){
         let filter = UIBarButtonItem(title: "filter", style: .plain, target: self, action: #selector(filterButtonClicked))
         navigationItem.rightBarButtonItem = filter
     }
+    
+
 
     //필터 액션
     @objc func filterButtonClicked(){
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 
-        let all = UIAlertAction(title: "전체보기", style: .default){ action in
+        let all = UIAlertAction(title: "전체보기", style: .default){ _ in
             self.mapView.removeAnnotations(self.annotations)
             self.selectedData = self.restaurantData
             self.makeAnnotaion()
             self.mapView.addAnnotations(self.annotations)
-
         }
-        let korean = UIAlertAction(title: "한식", style: .default){ action in
-            alertAction(action)
-        }
-        let cafe = UIAlertAction(title: "카페", style: .default){ action in
-            alertAction(action)
-        }
-        let chinese = UIAlertAction(title: "중식", style: .default){ action in
-            alertAction(action)
-        }
-        let japanese = UIAlertAction(title: "일식", style: .default){ action in
-            alertAction(action)
-        }
-        let snack = UIAlertAction(title: "분식", style: .default){ action in
-            alertAction(action)
-        }
-        let cancel = UIAlertAction(title: "취소", style: .cancel)
         
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+       
+        categoryTitle.forEach{ cateName in
+            let newAlerts = UIAlertAction(title: cateName, style: .default){ alertAction($0) }
+            alert.addAction(newAlerts)
+        }
+       
         func alertAction(_ sender:UIAlertAction){
             self.mapView.removeAnnotations(self.annotations)
             self.selectedData = self.restaurantData?.filter{ $0.category == sender.title! }
@@ -69,11 +69,6 @@ class MapViewController: UIViewController{
         }
         
         alert.addAction(all)
-        alert.addAction(korean)
-        alert.addAction(cafe)
-        alert.addAction(chinese)
-        alert.addAction(japanese)
-        alert.addAction(snack)
         alert.addAction(cancel)
         
         present(alert, animated: true)
@@ -101,14 +96,4 @@ extension MapViewController{
 }
 
 
-class CustomAnnotation: NSObject, MKAnnotation {
-    var title: String?
-    var subtitle: String?
-    @objc dynamic var coordinate: CLLocationCoordinate2D
 
-    init(title: String, subtitle: String, coordinate: CLLocationCoordinate2D) {
-        self.title = title
-        self.subtitle = subtitle
-        self.coordinate = coordinate
-    }
-}

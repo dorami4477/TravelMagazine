@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jn4-YT-ei4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hBZ-Yc-G6Z">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -403,7 +403,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10m-eu-tPs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4037.4045801526718" y="-35.211267605633807"/>
+            <point key="canvasLocation" x="1982" y="765"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="9co-41-tqc">
@@ -433,7 +433,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NcT-Ur-fO4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4761" y="-35"/>
+            <point key="canvasLocation" x="2705" y="765"/>
         </scene>
         <!--Travel-->
         <scene sceneID="gKk-E5-zNU">
@@ -467,6 +467,7 @@
                     <connections>
                         <segue destination="ZXu-SE-1C1" kind="relationship" relationship="viewControllers" id="S3x-WV-4dn"/>
                         <segue destination="H6Z-hf-gh0" kind="relationship" relationship="viewControllers" id="iCO-LT-gkK"/>
+                        <segue destination="jn4-YT-ei4" kind="relationship" relationship="viewControllers" id="teN-yo-GKR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PO2-Nz-40N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -492,10 +493,11 @@
             </objects>
             <point key="canvasLocation" x="1056" y="-727"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--맛집-->
         <scene sceneID="343-ze-5Mk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jn4-YT-ei4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="맛집" image="fork.knife.circle.fill" catalog="system" id="Jov-ok-f3z"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2zF-CK-URl">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -508,11 +510,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXq-9k-oq0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3110.6870229007632" y="-35.211267605633807"/>
+            <point key="canvasLocation" x="1056" y="765"/>
         </scene>
     </scenes>
     <resources>
         <image name="book.fill" catalog="system" width="128" height="95"/>
+        <image name="fork.knife.circle.fill" catalog="system" width="128" height="123"/>
         <image name="signpost.left.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

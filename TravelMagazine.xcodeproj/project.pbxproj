@@ -24,8 +24,9 @@
 		486E91052C018DAB0040913A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 486E91042C018DAB0040913A /* Base */; };
 		486E910F2C0191C00040913A /* MagazineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E910E2C0191C00040913A /* MagazineData.swift */; };
 		486E91152C01A5F10040913A /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E91142C01A5F10040913A /* ListCell.swift */; };
+		489E85C32C08B628001552DB /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489E85C22C08B628001552DB /* CustomAnnotation.swift */; };
 		48B9C37C2C086F930019B145 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B9C37B2C086F930019B145 /* MapViewController.swift */; };
-		48CA70ED2C0762BE005CBC6B /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA70EC2C0762BE005CBC6B /* Contants.swift */; };
+		48D148792C0AF2C70084EA41 /* ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D148782C0AF2C70084EA41 /* ReuseIdentifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,8 +48,9 @@
 		486E91062C018DAB0040913A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		486E910E2C0191C00040913A /* MagazineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineData.swift; sourceTree = "<group>"; };
 		486E91142C01A5F10040913A /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		489E85C22C08B628001552DB /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		48B9C37B2C086F930019B145 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		48CA70EC2C0762BE005CBC6B /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		48D148782C0AF2C70084EA41 /* ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				48B9C37B2C086F930019B145 /* MapViewController.swift */,
+				489E85C22C08B628001552DB /* CustomAnnotation.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -140,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				484C5DAC2C06295E003CF827 /* UI+Extension.swift */,
-				48CA70EC2C0762BE005CBC6B /* Contants.swift */,
+				48D148782C0AF2C70084EA41 /* ReuseIdentifier.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -225,12 +228,13 @@
 			files = (
 				481D70A72C01C118006A2302 /* RestaurantCell.swift in Sources */,
 				484C5DAD2C06295E003CF827 /* UI+Extension.swift in Sources */,
+				489E85C32C08B628001552DB /* CustomAnnotation.swift in Sources */,
 				486D13CE2C0711420044CE59 /* CityCell.swift in Sources */,
 				486E90FD2C018DAA0040913A /* ViewController.swift in Sources */,
 				486D13CA2C0710B30044CE59 /* CityInfo.swift in Sources */,
 				486E90F92C018DAA0040913A /* AppDelegate.swift in Sources */,
+				48D148792C0AF2C70084EA41 /* ReuseIdentifier.swift in Sources */,
 				481D70A52C01C01C006A2302 /* RestaurantTableViewController.swift in Sources */,
-				48CA70ED2C0762BE005CBC6B /* Contants.swift in Sources */,
 				481D70A32C01BD58006A2302 /* RestaurantData.swift in Sources */,
 				486E91152C01A5F10040913A /* ListCell.swift in Sources */,
 				486E90FB2C018DAA0040913A /* SceneDelegate.swift in Sources */,

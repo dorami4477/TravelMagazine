@@ -22,4 +22,12 @@ extension UIView {
         mask.path = path.cgPath
         layer.mask = mask
     }
+    
+    func roundCorneredImage(cornerSize:CGFloat, contentMode:UIView.ContentMode){
+        self.layer.cornerRadius = cornerSize
+        self.clipsToBounds = true
+        self.contentMode = contentMode
+    }
 }
+
+

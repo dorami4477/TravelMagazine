@@ -85,7 +85,7 @@ class RestaurantTableViewController: UITableViewController {
     }
     
     @objc func mapButtonClicked(){
-        let vc = storyboard?.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: MapViewController.identifier) as! MapViewController
         vc.restaurantData = dataManger
         navigationController?.pushViewController(vc, animated: true)
     }

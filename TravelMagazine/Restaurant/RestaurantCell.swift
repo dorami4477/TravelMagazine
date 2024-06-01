@@ -39,10 +39,8 @@ class RestaurantCell: UITableViewCell {
     }
     
     func configureUI(){
-        mainImageView.layer.cornerRadius = 10
-        mainImageView.contentMode = .scaleAspectFill
-        categoryLabel.layer.cornerRadius = 5
-        categoryLabel.clipsToBounds = true
+        mainImageView.roundCorneredImage(cornerSize: 10, contentMode: .scaleAspectFill)
+        categoryLabel.roundCorneredImage(cornerSize: 5, contentMode: .scaleAspectFill)
         
     }
     

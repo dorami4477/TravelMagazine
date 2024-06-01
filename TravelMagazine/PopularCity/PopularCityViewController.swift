@@ -24,6 +24,10 @@ class PopularCityViewController: UIViewController {
         configureTableView()
     }
     
+    //키보드 내리기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     func configure(){
         title = "인기도시"
@@ -39,8 +43,8 @@ class PopularCityViewController: UIViewController {
     func configureTableView(){
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: CellID.cityIdentifier, bundle: nil), forCellReuseIdentifier: CellID.cityIdentifier)
-        tableView.rowHeight = 120
+        tableView.register(UINib(nibName: CityCell.identifier, bundle: nil), forCellReuseIdentifier: CityCell.identifier)
+        tableView.rowHeight = 130
         tableView.separatorStyle = .none
     }
 
@@ -121,7 +125,7 @@ extension PopularCityViewController:UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellID.cityIdentifier, for: indexPath) as! CityCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CityCell.identifier, for: indexPath) as! CityCell
         cell.configureData(selectedItems[indexPath.row])
         cell.selectionStyle = .none
         if let searchStr{

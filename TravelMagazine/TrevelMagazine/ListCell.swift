@@ -28,9 +28,7 @@ class ListCell: UITableViewCell {
         subTitleLabel.setUILabel(size: 16, weight: .bold, color: .gray, numberOfLines: 1)
         dateLabel.setUILabel(size: 13, weight: .regular, color: .gray, numberOfLines: 1)
         dateLabel.textAlignment = .right
-        mainImageView.layer.cornerRadius = 10
-        mainImageView.clipsToBounds = true
-        mainImageView.contentMode = .scaleAspectFill
+        mainImageView.roundCorneredImage(cornerSize: 10, contentMode: .scaleAspectFill)
 
     }
     

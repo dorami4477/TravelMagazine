@@ -59,7 +59,7 @@ class CityCell: UITableViewCell {
         shadowUIView.layer.masksToBounds = false
         shadowUIView.layer.shadowColor = UIColor.black.cgColor
         shadowUIView.layer.shadowOpacity = 1
-        shadowUIView.layer.shadowRadius = 14
+        shadowUIView.layer.shadowRadius = 10
         shadowUIView.layer.shadowOffset = .init(width: 5, height: 5)
 
     }
