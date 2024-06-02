@@ -403,7 +403,17 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10m-eu-tPs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1982" y="765"/>
+            <point key="canvasLocation" x="1981" y="673"/>
+        </scene>
+        <!--ChattingRoom-->
+        <scene sceneID="iMO-Kg-P7i">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChattingRoom" id="7TT-mP-BTq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="co9-zZ-NzA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNw-Wj-WNU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1931" y="1368"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="9co-41-tqc">
@@ -433,7 +443,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NcT-Ur-fO4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2705" y="765"/>
+            <point key="canvasLocation" x="2705" y="673"/>
         </scene>
         <!--Travel-->
         <scene sceneID="gKk-E5-zNU">
@@ -468,6 +478,7 @@
                         <segue destination="ZXu-SE-1C1" kind="relationship" relationship="viewControllers" id="S3x-WV-4dn"/>
                         <segue destination="H6Z-hf-gh0" kind="relationship" relationship="viewControllers" id="iCO-LT-gkK"/>
                         <segue destination="jn4-YT-ei4" kind="relationship" relationship="viewControllers" id="teN-yo-GKR"/>
+                        <segue destination="Qms-sh-NEh" kind="relationship" relationship="viewControllers" id="F5U-9e-Gjh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PO2-Nz-40N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -510,12 +521,32 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXq-9k-oq0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056" y="765"/>
+            <point key="canvasLocation" x="1056" y="673"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="PUQ-8a-VC1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qms-sh-NEh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chat" image="rectangle.3.group.bubble.fill" catalog="system" id="qt6-MT-YFZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AfF-CN-Rlm">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7TT-mP-BTq" kind="relationship" relationship="rootViewController" id="dss-8A-vcd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9H-7i-A0w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056" y="1368"/>
         </scene>
     </scenes>
     <resources>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="fork.knife.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="rectangle.3.group.bubble.fill" catalog="system" width="128" height="110"/>
         <image name="signpost.left.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

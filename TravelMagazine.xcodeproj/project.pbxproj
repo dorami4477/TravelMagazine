@@ -25,6 +25,13 @@
 		486E910F2C0191C00040913A /* MagazineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E910E2C0191C00040913A /* MagazineData.swift */; };
 		486E91152C01A5F10040913A /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E91142C01A5F10040913A /* ListCell.swift */; };
 		489E85C32C08B628001552DB /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489E85C22C08B628001552DB /* CustomAnnotation.swift */; };
+		48B1BD642C0C97FE0005E5C1 /* ChattingRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B1BD632C0C97FE0005E5C1 /* ChattingRoom.storyboard */; };
+		48B1BD662C0C98120005E5C1 /* ChattingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1BD652C0C98120005E5C1 /* ChattingRoomViewController.swift */; };
+		48B1BD682C0C99BB0005E5C1 /* ChattingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1BD672C0C99BB0005E5C1 /* ChattingData.swift */; };
+		48B1BD6B2C0C9B700005E5C1 /* PersonalChatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48B1BD6A2C0C9B700005E5C1 /* PersonalChatListTableViewCell.xib */; };
+		48B1BD6C2C0C9B700005E5C1 /* PersonalChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1BD692C0C9B700005E5C1 /* PersonalChatListTableViewCell.swift */; };
+		48B1BD6F2C0C9B840005E5C1 /* GroupChatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48B1BD6E2C0C9B840005E5C1 /* GroupChatListTableViewCell.xib */; };
+		48B1BD702C0C9B840005E5C1 /* GroupChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1BD6D2C0C9B840005E5C1 /* GroupChatListTableViewCell.swift */; };
 		48B9C37C2C086F930019B145 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B9C37B2C086F930019B145 /* MapViewController.swift */; };
 		48D148792C0AF2C70084EA41 /* ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D148782C0AF2C70084EA41 /* ReuseIdentifier.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +56,13 @@
 		486E910E2C0191C00040913A /* MagazineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineData.swift; sourceTree = "<group>"; };
 		486E91142C01A5F10040913A /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		489E85C22C08B628001552DB /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
+		48B1BD632C0C97FE0005E5C1 /* ChattingRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChattingRoom.storyboard; sourceTree = "<group>"; };
+		48B1BD652C0C98120005E5C1 /* ChattingRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingRoomViewController.swift; sourceTree = "<group>"; };
+		48B1BD672C0C99BB0005E5C1 /* ChattingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChattingData.swift; sourceTree = "<group>"; };
+		48B1BD692C0C9B700005E5C1 /* PersonalChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalChatListTableViewCell.swift; sourceTree = "<group>"; };
+		48B1BD6A2C0C9B700005E5C1 /* PersonalChatListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalChatListTableViewCell.xib; sourceTree = "<group>"; };
+		48B1BD6D2C0C9B840005E5C1 /* GroupChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatListTableViewCell.swift; sourceTree = "<group>"; };
+		48B1BD6E2C0C9B840005E5C1 /* GroupChatListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupChatListTableViewCell.xib; sourceTree = "<group>"; };
 		48B9C37B2C086F930019B145 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		48D148782C0AF2C70084EA41 /* ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +129,7 @@
 		486E90F72C018DAA0040913A /* TravelMagazine */ = {
 			isa = PBXGroup;
 			children = (
+				48B1BD622C0C97DE0005E5C1 /* ChattingRoom */,
 				48CA70EB2C0762A7005CBC6B /* Helpers */,
 				48B9C37D2C0870100019B145 /* Map */,
 				486D13C62C070F690044CE59 /* PopularCity */,
@@ -126,8 +141,22 @@
 				486E91012C018DAB0040913A /* Assets.xcassets */,
 				486E91032C018DAB0040913A /* LaunchScreen.storyboard */,
 				486E91062C018DAB0040913A /* Info.plist */,
+				48B1BD632C0C97FE0005E5C1 /* ChattingRoom.storyboard */,
 			);
 			path = TravelMagazine;
+			sourceTree = "<group>";
+		};
+		48B1BD622C0C97DE0005E5C1 /* ChattingRoom */ = {
+			isa = PBXGroup;
+			children = (
+				48B1BD672C0C99BB0005E5C1 /* ChattingData.swift */,
+				48B1BD652C0C98120005E5C1 /* ChattingRoomViewController.swift */,
+				48B1BD692C0C9B700005E5C1 /* PersonalChatListTableViewCell.swift */,
+				48B1BD6A2C0C9B700005E5C1 /* PersonalChatListTableViewCell.xib */,
+				48B1BD6D2C0C9B840005E5C1 /* GroupChatListTableViewCell.swift */,
+				48B1BD6E2C0C9B840005E5C1 /* GroupChatListTableViewCell.xib */,
+			);
+			path = ChattingRoom;
 			sourceTree = "<group>";
 		};
 		48B9C37D2C0870100019B145 /* Map */ = {
@@ -215,7 +244,10 @@
 				486E91022C018DAB0040913A /* Assets.xcassets in Resources */,
 				486E91052C018DAB0040913A /* Base in Resources */,
 				486D13CD2C0711420044CE59 /* CityCell.xib in Resources */,
+				48B1BD6F2C0C9B840005E5C1 /* GroupChatListTableViewCell.xib in Resources */,
+				48B1BD642C0C97FE0005E5C1 /* ChattingRoom.storyboard in Resources */,
 				486E91002C018DAA0040913A /* Base in Resources */,
+				48B1BD6B2C0C9B700005E5C1 /* PersonalChatListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,16 +260,20 @@
 			files = (
 				481D70A72C01C118006A2302 /* RestaurantCell.swift in Sources */,
 				484C5DAD2C06295E003CF827 /* UI+Extension.swift in Sources */,
+				48B1BD702C0C9B840005E5C1 /* GroupChatListTableViewCell.swift in Sources */,
+				48B1BD662C0C98120005E5C1 /* ChattingRoomViewController.swift in Sources */,
 				489E85C32C08B628001552DB /* CustomAnnotation.swift in Sources */,
 				486D13CE2C0711420044CE59 /* CityCell.swift in Sources */,
 				486E90FD2C018DAA0040913A /* ViewController.swift in Sources */,
 				486D13CA2C0710B30044CE59 /* CityInfo.swift in Sources */,
 				486E90F92C018DAA0040913A /* AppDelegate.swift in Sources */,
 				48D148792C0AF2C70084EA41 /* ReuseIdentifier.swift in Sources */,
+				48B1BD6C2C0C9B700005E5C1 /* PersonalChatListTableViewCell.swift in Sources */,
 				481D70A52C01C01C006A2302 /* RestaurantTableViewController.swift in Sources */,
 				481D70A32C01BD58006A2302 /* RestaurantData.swift in Sources */,
 				486E91152C01A5F10040913A /* ListCell.swift in Sources */,
 				486E90FB2C018DAA0040913A /* SceneDelegate.swift in Sources */,
+				48B1BD682C0C99BB0005E5C1 /* ChattingData.swift in Sources */,
 				486E910F2C0191C00040913A /* MagazineData.swift in Sources */,
 				486D13C82C070F830044CE59 /* PopularCityViewController.swift in Sources */,
 				48B9C37C2C086F930019B145 /* MapViewController.swift in Sources */,
