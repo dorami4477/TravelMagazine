@@ -33,7 +33,7 @@ class PersonalChatListTableViewCell: UITableViewCell {
         chatRoomNameLabel.text = data.chatroomName
         chatFristLineLabel.text = data.chatList.last?.message
         guard let date = data.chatList.last?.date else { return }
-        DateLabel.text = stringConvertToDateTime(date: date)
+        DateLabel.text = data.chatList.last?.dayDate
     }
     
     func configureUI(){
@@ -41,20 +41,6 @@ class PersonalChatListTableViewCell: UITableViewCell {
         chatRoomNameLabel.setUILabel(size: 15, weight: .bold, color: .black, numberOfLines: 1)
         chatFristLineLabel.setUILabel(size: 13, weight: .regular, color: .darkGray, numberOfLines: 1)
         DateLabel.setUILabel(size: 12, weight: .regular, color: .gray, numberOfLines: 1)
-    }
-    
-    //날짜 형식 변환
-    func stringConvertToDateTime(date:String) -> String {
-        let stringFormat = "yyyy-MM-dd HH:mm"
-        let formatter = DateFormatter()
-        formatter.dateFormat = stringFormat
-        formatter.locale = Locale(identifier: "ko")
-        guard let tempDate = formatter.date(from: date) else {
-            return ""
-        }
-        formatter.dateFormat = "yy.MM.dd"
-        
-        return formatter.string(from: tempDate)
     }
 
 }

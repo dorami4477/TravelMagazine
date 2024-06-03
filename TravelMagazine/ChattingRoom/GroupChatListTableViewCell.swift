@@ -9,15 +9,31 @@ import UIKit
 
 class GroupChatListTableViewCell: UITableViewCell {
 
+    @IBOutlet var mainImageViews: [UIImageView]!
+    @IBOutlet var chatRoomNameLabel: UILabel!
+    @IBOutlet var chatFristLineLabel: UILabel!
+    @IBOutlet var DateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        configureUI()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func configureData(_ data:ChatRoom){
+        for i in 0..<mainImageViews.count{
+                mainImageViews[i].image = UIImage(named: data.chatroomImage[i])
+        }
 
-        // Configure the view for the selected state
+        chatRoomNameLabel.text = data.chatroomName
+        chatFristLineLabel.text = data.chatList.last?.message
+        guard let date = data.chatList.last?.date else { return }
+        DateLabel.text = data.chatList.last?.dayDate
     }
     
+    func configureUI(){
+       // mainImageView.roundCorneredImage(cornerSize: mainImageView.frame.width / 2, contentMode: .scaleAspectFill)
+        chatRoomNameLabel.setUILabel(size: 15, weight: .bold, color: .black, numberOfLines: 1)
+        chatFristLineLabel.setUILabel(size: 13, weight: .regular, color: .darkGray, numberOfLines: 1)
+        DateLabel.setUILabel(size: 12, weight: .regular, color: .gray, numberOfLines: 1)
+    }
 }

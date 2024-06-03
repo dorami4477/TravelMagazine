@@ -35,6 +35,32 @@ struct Chat {
     let user: User
     let date: String
     let message: String
+    
+    var dayDate:String{
+            let stringFormat = "yyyy-MM-dd HH:mm"
+            let formatter = DateFormatter()
+            formatter.dateFormat = stringFormat
+            formatter.locale = Locale(identifier: "ko")
+            guard let tempDate = formatter.date(from: date) else {
+                return ""
+            }
+            formatter.dateFormat = "yy.MM.dd"
+            
+            return formatter.string(from: tempDate)
+    }
+    
+    var timeDate:String{
+        let stringFormat = "yyyy-MM-dd HH:mm"
+        let formatter = DateFormatter()
+        formatter.dateFormat = stringFormat
+        formatter.locale = Locale(identifier: "ko")
+        guard let tempDate = formatter.date(from: date) else {
+            return ""
+        }
+        formatter.dateFormat = "hh:mm a"
+        return formatter.string(from: tempDate)
+    }
+    
 }
 
 

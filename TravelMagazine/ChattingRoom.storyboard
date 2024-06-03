@@ -39,8 +39,55 @@
             </objects>
             <point key="canvasLocation" x="73" y="-34"/>
         </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="E8H-HF-hNo">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="onL-rV-SQT" customClass="ChatViewController" customModule="TravelMagazine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HAC-9a-hCb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Adn-dZ-7CV">
+                                <rect key="frame" x="0.0" y="59" width="393" height="687"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3le-CE-rDQ">
+                                <rect key="frame" x="16" y="762" width="361" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sGj-Jk-a0g"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="p7r-F5-Sab"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3le-CE-rDQ" firstAttribute="top" secondItem="Adn-dZ-7CV" secondAttribute="bottom" constant="16" id="6A9-Q7-cQ3"/>
+                            <constraint firstItem="Adn-dZ-7CV" firstAttribute="leading" secondItem="p7r-F5-Sab" secondAttribute="leading" id="8Fp-7m-fHA"/>
+                            <constraint firstItem="3le-CE-rDQ" firstAttribute="leading" secondItem="p7r-F5-Sab" secondAttribute="leading" constant="16" id="CPI-71-r0n"/>
+                            <constraint firstItem="p7r-F5-Sab" firstAttribute="trailing" secondItem="3le-CE-rDQ" secondAttribute="trailing" constant="16" id="EfZ-G2-zCQ"/>
+                            <constraint firstItem="p7r-F5-Sab" firstAttribute="bottom" secondItem="3le-CE-rDQ" secondAttribute="bottom" constant="16" id="FzC-Xo-xvC"/>
+                            <constraint firstItem="Adn-dZ-7CV" firstAttribute="top" secondItem="p7r-F5-Sab" secondAttribute="top" id="KKB-Ek-oSo"/>
+                            <constraint firstItem="Adn-dZ-7CV" firstAttribute="trailing" secondItem="p7r-F5-Sab" secondAttribute="trailing" id="uhR-a4-Lhr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dialogueTableView" destination="Adn-dZ-7CV" id="npm-5L-G7x"/>
+                        <outlet property="inputTextView" destination="3le-CE-rDQ" id="msg-IW-OSX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6n9-Dw-TUL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="901.52671755725191" y="-35.211267605633807"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

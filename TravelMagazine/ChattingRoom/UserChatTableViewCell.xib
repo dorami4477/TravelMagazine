@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserChatTableViewCell" rowHeight="89" id="KGk-i7-Jjw" customClass="UserChatTableViewCell" customModule="TravelMagazine" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="89"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="378" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRO-la-INp">
+                        <rect key="frame" x="16" y="8" width="346" height="1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="gNa-6D-wGh"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYq-gv-33W" customClass="BaseLabel" customModule="TravelMagazine" customModuleProvider="target">
+                        <rect key="frame" x="320.66666666666669" y="15.999999999999998" width="41.333333333333314" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88:88 오전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwP-HH-piK">
+                        <rect key="frame" x="251.66666666666663" y="22" width="61" height="14.333333333333336"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="61" id="dYK-fP-FCh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rjf-Ve-1tL">
+                        <rect key="frame" x="168" y="0.0" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tYq-gv-33W" firstAttribute="leading" secondItem="jwP-HH-piK" secondAttribute="trailing" constant="8" id="1Mw-tT-Rom"/>
+                    <constraint firstItem="TRO-la-INp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="2S0-T9-9dT"/>
+                    <constraint firstAttribute="trailing" secondItem="tYq-gv-33W" secondAttribute="trailing" constant="16" id="5a3-aF-OKh"/>
+                    <constraint firstAttribute="trailing" secondItem="TRO-la-INp" secondAttribute="trailing" constant="16" id="AL7-kJ-d0C"/>
+                    <constraint firstItem="jwP-HH-piK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="TRO-la-INp" secondAttribute="bottom" constant="8" id="B9L-8n-IVN"/>
+                    <constraint firstItem="tYq-gv-33W" firstAttribute="bottom" secondItem="jwP-HH-piK" secondAttribute="bottom" id="Brh-IN-tQx"/>
+                    <constraint firstItem="tYq-gv-33W" firstAttribute="top" secondItem="TRO-la-INp" secondAttribute="top" constant="8" id="QVp-qY-Aft"/>
+                    <constraint firstItem="Rjf-Ve-1tL" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="QlC-aT-WEm"/>
+                    <constraint firstItem="Rjf-Ve-1tL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="XXn-Cr-BUq"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tYq-gv-33W" secondAttribute="bottom" constant="8" id="dP6-kt-oUQ"/>
+                    <constraint firstItem="TRO-la-INp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="hcv-kl-2mO"/>
+                    <constraint firstItem="jwP-HH-piK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="tu6-vI-S2d"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="jwP-HH-piK" id="sfD-2R-DR8"/>
+                <outlet property="dateLineLabel" destination="Rjf-Ve-1tL" id="noY-oF-t8H"/>
+                <outlet property="dateLineView" destination="TRO-la-INp" id="nHE-0a-C7f"/>
+                <outlet property="dialogueLabel" destination="tYq-gv-33W" id="FaI-64-Tqf"/>
+            </connections>
+            <point key="canvasLocation" x="174.04580152671755" y="4.5774647887323949"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

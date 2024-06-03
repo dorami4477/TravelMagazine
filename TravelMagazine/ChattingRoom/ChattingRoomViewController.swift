@@ -62,8 +62,6 @@ extension ChattingRoomViewController:UISearchBarDelegate, UISearchResultsUpdatin
             }
             listResults = searchItems
 
-        }else{
-            print("검색어를 입력해야함")
         }
     }
     
@@ -83,11 +81,24 @@ extension ChattingRoomViewController:UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PersonalChatListTableViewCell.identifier, for: indexPath) as! PersonalChatListTableViewCell
-        cell.configureData(listResults[indexPath.row])
+        if listResults[indexPath.row].chatroomImage.count > 1{
+            let cell = tableView.dequeueReusableCell(withIdentifier: GroupChatListTableViewCell.identifier, for: indexPath) as! GroupChatListTableViewCell
+            cell.configureData(listResults[indexPath.row])
+            cell.selectionStyle = .none
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: PersonalChatListTableViewCell.identifier, for: indexPath) as! PersonalChatListTableViewCell
+            cell.configureData(listResults[indexPath.row])
+            cell.selectionStyle = .none
+            return cell
+        }
 
-        return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: ChatViewController.identifier) as! ChatViewController
+        vc.dialogueData = listResults[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
 }

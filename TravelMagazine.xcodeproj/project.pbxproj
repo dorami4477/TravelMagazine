@@ -16,6 +16,12 @@
 		486D13CA2C0710B30044CE59 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486D13C92C0710B30044CE59 /* CityInfo.swift */; };
 		486D13CD2C0711420044CE59 /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486D13CC2C0711420044CE59 /* CityCell.xib */; };
 		486D13CE2C0711420044CE59 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486D13CB2C0711420044CE59 /* CityCell.swift */; };
+		486E1B4F2C0D88A30044C694 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E1B4E2C0D88A30044C694 /* ChatViewController.swift */; };
+		486E1B542C0D895F0044C694 /* SpeakerChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486E1B532C0D895F0044C694 /* SpeakerChatTableViewCell.xib */; };
+		486E1B552C0D895F0044C694 /* SpeakerChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E1B522C0D895F0044C694 /* SpeakerChatTableViewCell.swift */; };
+		486E1B572C0D98CC0044C694 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E1B562C0D98CC0044C694 /* BaseLabel.swift */; };
+		486E1B5A2C0D9A5B0044C694 /* UserChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486E1B592C0D9A5B0044C694 /* UserChatTableViewCell.xib */; };
+		486E1B5B2C0D9A5B0044C694 /* UserChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E1B582C0D9A5B0044C694 /* UserChatTableViewCell.swift */; };
 		486E90F92C018DAA0040913A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E90F82C018DAA0040913A /* AppDelegate.swift */; };
 		486E90FB2C018DAA0040913A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E90FA2C018DAA0040913A /* SceneDelegate.swift */; };
 		486E90FD2C018DAA0040913A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E90FC2C018DAA0040913A /* ViewController.swift */; };
@@ -45,6 +51,12 @@
 		486D13C92C0710B30044CE59 /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
 		486D13CB2C0711420044CE59 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		486D13CC2C0711420044CE59 /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
+		486E1B4E2C0D88A30044C694 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		486E1B522C0D895F0044C694 /* SpeakerChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerChatTableViewCell.swift; sourceTree = "<group>"; };
+		486E1B532C0D895F0044C694 /* SpeakerChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeakerChatTableViewCell.xib; sourceTree = "<group>"; };
+		486E1B562C0D98CC0044C694 /* BaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
+		486E1B582C0D9A5B0044C694 /* UserChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChatTableViewCell.swift; sourceTree = "<group>"; };
+		486E1B592C0D9A5B0044C694 /* UserChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserChatTableViewCell.xib; sourceTree = "<group>"; };
 		486E90F52C018DAA0040913A /* TravelMagazine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelMagazine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		486E90F82C018DAA0040913A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		486E90FA2C018DAA0040913A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +167,11 @@
 				48B1BD6A2C0C9B700005E5C1 /* PersonalChatListTableViewCell.xib */,
 				48B1BD6D2C0C9B840005E5C1 /* GroupChatListTableViewCell.swift */,
 				48B1BD6E2C0C9B840005E5C1 /* GroupChatListTableViewCell.xib */,
+				486E1B4E2C0D88A30044C694 /* ChatViewController.swift */,
+				486E1B522C0D895F0044C694 /* SpeakerChatTableViewCell.swift */,
+				486E1B532C0D895F0044C694 /* SpeakerChatTableViewCell.xib */,
+				486E1B582C0D9A5B0044C694 /* UserChatTableViewCell.swift */,
+				486E1B592C0D9A5B0044C694 /* UserChatTableViewCell.xib */,
 			);
 			path = ChattingRoom;
 			sourceTree = "<group>";
@@ -173,6 +190,7 @@
 			children = (
 				484C5DAC2C06295E003CF827 /* UI+Extension.swift */,
 				48D148782C0AF2C70084EA41 /* ReuseIdentifier.swift */,
+				486E1B562C0D98CC0044C694 /* BaseLabel.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -248,6 +266,8 @@
 				48B1BD642C0C97FE0005E5C1 /* ChattingRoom.storyboard in Resources */,
 				486E91002C018DAA0040913A /* Base in Resources */,
 				48B1BD6B2C0C9B700005E5C1 /* PersonalChatListTableViewCell.xib in Resources */,
+				486E1B5A2C0D9A5B0044C694 /* UserChatTableViewCell.xib in Resources */,
+				486E1B542C0D895F0044C694 /* SpeakerChatTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +279,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				481D70A72C01C118006A2302 /* RestaurantCell.swift in Sources */,
+				486E1B552C0D895F0044C694 /* SpeakerChatTableViewCell.swift in Sources */,
 				484C5DAD2C06295E003CF827 /* UI+Extension.swift in Sources */,
 				48B1BD702C0C9B840005E5C1 /* GroupChatListTableViewCell.swift in Sources */,
+				486E1B5B2C0D9A5B0044C694 /* UserChatTableViewCell.swift in Sources */,
 				48B1BD662C0C98120005E5C1 /* ChattingRoomViewController.swift in Sources */,
 				489E85C32C08B628001552DB /* CustomAnnotation.swift in Sources */,
 				486D13CE2C0711420044CE59 /* CityCell.swift in Sources */,
@@ -276,6 +298,8 @@
 				48B1BD682C0C99BB0005E5C1 /* ChattingData.swift in Sources */,
 				486E910F2C0191C00040913A /* MagazineData.swift in Sources */,
 				486D13C82C070F830044CE59 /* PopularCityViewController.swift in Sources */,
+				486E1B572C0D98CC0044C694 /* BaseLabel.swift in Sources */,
+				486E1B4F2C0D88A30044C694 /* ChatViewController.swift in Sources */,
 				48B9C37C2C086F930019B145 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
