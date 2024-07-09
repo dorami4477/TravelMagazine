@@ -40,6 +40,8 @@
 		48B1BD702C0C9B840005E5C1 /* GroupChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1BD6D2C0C9B840005E5C1 /* GroupChatListTableViewCell.swift */; };
 		48B9C37C2C086F930019B145 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B9C37B2C086F930019B145 /* MapViewController.swift */; };
 		48D148792C0AF2C70084EA41 /* ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D148782C0AF2C70084EA41 /* ReuseIdentifier.swift */; };
+		48EC81202C3D856E00A1F68F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC811F2C3D856E00A1F68F /* Observable.swift */; };
+		48EC81222C3D861700A1F68F /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC81212C3D861700A1F68F /* CityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,8 @@
 		48B1BD6E2C0C9B840005E5C1 /* GroupChatListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupChatListTableViewCell.xib; sourceTree = "<group>"; };
 		48B9C37B2C086F930019B145 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		48D148782C0AF2C70084EA41 /* ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifier.swift; sourceTree = "<group>"; };
+		48EC811F2C3D856E00A1F68F /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		48EC81212C3D861700A1F68F /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 				486D13C72C070F830044CE59 /* PopularCityViewController.swift */,
 				486D13CB2C0711420044CE59 /* CityCell.swift */,
 				486D13CC2C0711420044CE59 /* CityCell.xib */,
+				48EC811F2C3D856E00A1F68F /* Observable.swift */,
+				48EC81212C3D861700A1F68F /* CityViewModel.swift */,
 			);
 			path = PopularCity;
 			sourceTree = "<group>";
@@ -289,11 +295,13 @@
 				486E90FD2C018DAA0040913A /* ViewController.swift in Sources */,
 				486D13CA2C0710B30044CE59 /* CityInfo.swift in Sources */,
 				486E90F92C018DAA0040913A /* AppDelegate.swift in Sources */,
+				48EC81222C3D861700A1F68F /* CityViewModel.swift in Sources */,
 				48D148792C0AF2C70084EA41 /* ReuseIdentifier.swift in Sources */,
 				48B1BD6C2C0C9B700005E5C1 /* PersonalChatListTableViewCell.swift in Sources */,
 				481D70A52C01C01C006A2302 /* RestaurantTableViewController.swift in Sources */,
 				481D70A32C01BD58006A2302 /* RestaurantData.swift in Sources */,
 				486E91152C01A5F10040913A /* ListCell.swift in Sources */,
+				48EC81202C3D856E00A1F68F /* Observable.swift in Sources */,
 				486E90FB2C018DAA0040913A /* SceneDelegate.swift in Sources */,
 				48B1BD682C0C99BB0005E5C1 /* ChattingData.swift in Sources */,
 				486E910F2C0191C00040913A /* MagazineData.swift in Sources */,

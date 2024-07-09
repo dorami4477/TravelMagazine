@@ -14,7 +14,9 @@ class PopularCityViewController: UIViewController {
     @IBOutlet var searchBar: UISearchBar!
     
     let cityInfo = CityInfo().city
-    lazy var selectedItems:[City] = cityInfo
+   // lazy var selectedItems:[City] = cityInfo
+    var selectedItems:[City] = []
+    let viewModel = CityViewModel()
     
     var searchStr:String?
     
@@ -22,6 +24,14 @@ class PopularCityViewController: UIViewController {
         super.viewDidLoad()
         configure()
         configureTableView()
+        bindData()
+    }
+    
+    func bindData(){
+        viewModel.outputList.bind { value in
+            self.selectedItems = value
+            self.tableView.reloadData()
+        }
     }
     
     //키보드 내리기
@@ -51,17 +61,7 @@ class PopularCityViewController: UIViewController {
     
     //세그먼트컨트롤러 액션
     @IBAction func locationChanged(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0{
-            selectedItems = cityInfo
-
-        }else if sender.selectedSegmentIndex == 1{
-            selectedItems = cityInfo.filter{ $0.domestic_travel }
-            
-        }else if sender.selectedSegmentIndex == 2{
-            selectedItems = cityInfo.filter{ $0.domestic_travel == false }
-            
-        }
-        tableView.reloadData()
+        viewModel.inputSegment.value = sender.selectedSegmentIndex
     }
     
 
@@ -75,8 +75,8 @@ extension PopularCityViewController:UISearchBarDelegate{
         var items:[City] = []
         var searchItems:[City] = []
         //공백확인
-        if !searchText.trimmingCharacters(in: .whitespaces).isEmpty{
-            searchStr = searchText
+       if !searchText.trimmingCharacters(in: .whitespaces).isEmpty{
+               searchStr = searchText
 
                 if locationSegmentedControl.selectedSegmentIndex == 0{
                     items = cityInfo
@@ -104,7 +104,7 @@ extension PopularCityViewController:UISearchBarDelegate{
             let alert = UIAlertController(title: "검색어를 입력해주세요.", message: nil, preferredStyle: .alert)
             let ok = UIAlertAction(title: "확인", style: .default){ _ in
                 searchBar.text = ""
-                self.selectedItems = self.cityInfo
+              //  self.selectedItems = self.cityInfo
                 self.locationSegmentedControl.selectedSegmentIndex = 0
                 self.tableView.reloadData()
             }
